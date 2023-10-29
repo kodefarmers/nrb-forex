@@ -13,12 +13,12 @@ class NrbForex
     public function __construct()
     {
         $this->rates = collect([]);
-        $this->toCurrency = 'USD';
+        $this->toCurrency = config('nrbforex.currency');
     }
 
     private function fetchRates(): Collection
     {
-        $response = Http::get('https://www.nrb.org.np/api/forex/v1/' . 'app-rate');
+        $response = Http::get(config('nrbforex.url') . 'app-rate');
         $data = $response->json();
 
         return collect($data)->map(function ($rate) {
@@ -33,7 +33,7 @@ class NrbForex
         });
     }
 
-    public function getRate(string $currency)
+    public function getRate(string $currency): int|float
     {
         $rate = $this->rates->firstWhere('currency', $currency);
         if (!$rate) {
