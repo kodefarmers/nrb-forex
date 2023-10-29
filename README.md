@@ -22,8 +22,8 @@ The Laravel facade and service provider are registered through auto-discovery, s
 
 You can generate a config file by:
 
-```
-php artisan vendor:publish --tag=nrbforex
+```bash
+$ php artisan vendor:publish --tag=nrbforex
 ```
 
 ## Usage
@@ -39,6 +39,8 @@ return NrbForex::convert(1);
 return NrbForex::from('EUR')->convert(1);
 // returns 1 EUR to NPR
 ```
+
+You can change the default currency to convert from (it is USD by default) from config/nrbforex.php.
 
 ## Contributing
 
