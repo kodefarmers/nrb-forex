@@ -13,5 +13,7 @@
       "email": "respond2shivaji@gmail.com"
     }
   ],
-  "require": {}
+  "require-dev": {
+    "orchestra/testbench": "^8.14"
+  }
 }
