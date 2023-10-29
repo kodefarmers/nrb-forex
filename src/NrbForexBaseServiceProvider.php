@@ -10,7 +10,7 @@ class NrbForexBaseServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/nrbforex.php' => config_path('nrbforex.php'),
-        ]);
+        ], 'nrbforex');
     }
 
     public function register(): void
