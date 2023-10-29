@@ -53,4 +53,5 @@ This project is licensed under [MIT](https://opensource.org/license/mit-0/)
 ## Self-Promotion
 
 Star the repository on [Github](https://github.com/kodefarmers/nrb-forex)
+
 Follow on [Github](https://github.com/kodefarmers)
