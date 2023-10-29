@@ -68,4 +68,25 @@ class NrbForex
         $this->rates = $this->fetchRates();
         return $amount * $this->getRate($this->toCurrency);
     }
+
+    public function currencies()
+    {
+        try {
+            $response = Http::get(config('nrbforex.url') . 'app-rate');
+            $data = $response->json();
+
+            if ($response->failed()) {
+                throw new NrbForexException('Failed to fetch forex rates.');
+            }
+
+            return collect($data)->map(function ($rate) {
+                return [
+                    'currency' => $rate['iso3'],
+                    'name' => $rate['name'],
+                ];
+            });
+        } catch(NrbForexException $e) {
+            throw new NrbForexException($e->getMessage());
+        }
+    }
 }
