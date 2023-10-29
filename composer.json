@@ -1,0 +1,17 @@
+{
+  "name": "kodefarmers/nrb-forex",
+  "description": "Laravel Package to consume Nepal Rastra Bank's foreign exchange rate API.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "KodeFarmers\\NrbForex\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Shivaji Chalise",
+      "email": "respond2shivaji@gmail.com"
+    }
+  ],
+  "require": {}
+}
