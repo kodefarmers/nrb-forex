@@ -15,5 +15,12 @@
   ],
   "require-dev": {
     "orchestra/testbench": "^8.14"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "KodeFarmers\\NrbForex\\NrbForexBaseServiceProvider"
+      ]
+    }
   }
 }
