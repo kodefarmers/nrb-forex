@@ -20,7 +20,7 @@ class NrbForexBaseServiceProvider extends ServiceProvider
             'nrbforex'
         );
 
-        $this->app->bind('NrbForex', function ($app) {
+        $this->app->singleton('NrbForex', function ($app) {
             return new NrbForex();
         });
     }
